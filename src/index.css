@@ -5,9 +5,76 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
+body {
+  margin: 0;
+  
+  width: 100%;
+height: 100%;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+body, html, #root, #backgroundCanvas{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  
+}
+#backgroundCanvas::-webkit-scrollbar, html::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* Optional: just to make the scrollbar invisible */
+}
+
+#backgroundCanvas,#backgroundCanvas1,#backgroundCanvas2,#backgroundCanvas3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  /* overflow: auto; */
+  /* opacity: 0.3; */
+  /* transition: opacity 0.5s ease; */
+  background-color: transparent;
+}
+
+#root {
+  
+  position: relative;
+  z-index: 2;
+  /* transition: opacity 0.5s ease; */
+  /* opacity:0.5 ; */
+}
+
+
+body::-webkit-scrollbar, html::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* Optional: just to make the scrollbar invisible */
+}
+#root::-webkit-scrollbar, html::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* Optional: just to make the scrollbar invisible */
+}
+
+/* Hide scroll bars for Firefox */
+body ,#backgroundCanvas{
+  scrollbar-width: none; /* Firefox */
+}
+html ,#backgroundCanvas{
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Internet Explorer 10+ */
+body,#backgroundCanvas {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+html,#backgroundCanvas {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+
